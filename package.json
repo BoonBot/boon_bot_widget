@@ -1,0 +1,38 @@
+{
+  "name": "boon_bot_widget",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack serve --open --mode development",
+    "build": "cross-env NODE_ENV=production webpack --mode production"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.0",
+    "@babel/preset-env": "^7.24.0",
+    "@babel/preset-react": "^7.23.3",
+    "@babel/preset-typescript": "^7.23.3",
+    "@types/react": "^18.2.67",
+    "@types/react-dom": "^18.2.22",
+    "autoprefixer": "^10.4.18",
+    "babel-loader": "^9.1.3",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.10.0",
+    "cssnano": "^6.1.0",
+    "html-webpack-plugin": "^5.6.0",
+    "postcss": "^8.4.36",
+    "postcss-loader": "^8.1.1",
+    "postcss-preset-env": "^9.5.2",
+    "style-loader": "^3.3.4",
+    "tailwindcss": "^3.4.1",
+    "webpack": "^5.90.3",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.3"
+  }
+}
