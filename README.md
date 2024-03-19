@@ -13,3 +13,10 @@ npm run dev
 # Build for production
 npm run build
 ```
+
+
+#### Release
+
+```bash
+gh release create <vX.X.X> --latest --title "Version 6.0.2" --generate-notes
+```
