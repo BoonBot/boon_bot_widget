@@ -17,7 +17,7 @@ export default class BoonWidget {
   }
 
   mount() {
-    const component = <Widget />;
+    const component = <Widget userId={this.userId} botId={this.botId} />;
 
     const doRender = () => {
       if (this.rootNode) throw new Error('Already mounted');
