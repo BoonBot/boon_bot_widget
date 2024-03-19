@@ -16,7 +16,7 @@ const Widget = ({ userId, botId }: WidgetProps) => {
             src={`${PLATFORM_URL}/widget/${userId}/${botId}`}
         ></iframe>
         <div
-            className={`w-12 h-12 ml-auto mt-2 rounded-full bg-[#0e6eff] grid place-items-center cursor-pointer transition-all hover:scale-105 shadow-lg select-none`}
+            className={`!w-12 !h-12 ml-auto mt-2 rounded-full bg-[#0e6eff] grid place-items-center cursor-pointer transition-all hover:scale-105 shadow-lg select-none`}
             onClick={() => { setIsWidgetOpen(!isWidgetOpen) }}
         >
             {isWidgetOpen ?
