@@ -10,13 +10,18 @@ type WidgetProps = {
 const Widget = ({ userId, botId }: WidgetProps) => {
     const [isWidgetOpen, setIsWidgetOpen] = useState(false);
 
-    return <main className='fixed right-0 bottom-0 mb-4 mr-4'>
+    return <main className='!fixed !right-0 !bottom-0 !mb-4 !mr-4'>
         <iframe
-            className={`absolute bottom-[calc(100%+0.5em)] right-0 w-[400px] h-[calc(100vh-300px)] rounded-lg shadow-lg border transition-all origin-bottom-right ${isWidgetOpen ? "scale-100" : "scale-0"}`}
+            className={`absolute bottom-[calc(100%+0.5em)] right-0 w-[400px] h-[650px] max-h-[calc(100vh-100px)] rounded-lg shadow-lg border transition-all origin-bottom-right ${isWidgetOpen ? "scale-100" : "scale-0"}`}
             src={`${PLATFORM_URL}/widget/${userId}/${botId}`}
-        ></iframe>
+        >
+        </iframe>
+        {/* {isWidgetOpen && <X width={24} height={24} strokeWidth={3} className="stroke-white absolute top-0 right-0" />} */}
+        <h1 className='absolute bottom-[calc(100%+0.5em)] right-0 bg-red-500 h-[650px] max-h-[calc(100vh-100px)]'>
+            <button onClick={() => { setIsWidgetOpen(!isWidgetOpen) }}>{isWidgetOpen && <X width={18} height={18} strokeWidth={2} className="stroke-white absolute top-2 right-3" />}</button>
+        </h1>
         <div
-            className={`!w-12 !h-12 ml-auto mt-2 rounded-full bg-[#0e6eff] grid place-items-center cursor-pointer transition-all hover:scale-105 shadow-lg select-none`}
+            className={`!w-12 !h-12 !ml-auto !mt-2 !rounded-full !bg-[#0e6eff] !grid !place-items-center !cursor-pointer !transition-all !hover:scale-105 !shadow-lg !select-none`}
             onClick={() => { setIsWidgetOpen(!isWidgetOpen) }}
         >
             {isWidgetOpen ?
